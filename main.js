@@ -3,27 +3,14 @@
 // 1 //
 const names = ['Ali', 'Aisha', 'Omar', 'Fatima', 'Amir'];
 
-const namesStartingWithA = names.filter(name => name.startsWith('A'));
-console.log(namesStartingWithA);
-
-// 2 //
-
-// Write an expression to display the number of occurrences of each word.
-
-
-const words = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
-const Count = words.reduce((acc, word) => {
-    acc[word] = (acc[word] || 0) + 1;
-    return acc;
-}, {});
-
-console.log(Count);
+const StartingWithA = names.filter(name => name.startsWith('A'));
+console.log(StartingWithA);
 
 // 3 //
 
 function orderFood(callback) {
     console.log('Ordering food...');
-    setTimeout(callback, 1000);
+    setTimeout(callback, 2000);
 }
 
 function prepareFood(callback) {
@@ -33,17 +20,17 @@ function prepareFood(callback) {
 
 function deliverFood(callback) {
     console.log('Delivering food...');
-    setTimeout(callback, 1500);
+    setTimeout(callback, 2000);
 }
 
 function receiveFood(callback) {
     console.log('Receiving food...');
-    setTimeout(callback, 500);
+    setTimeout(callback, 2000);
 }
 
 function makePayment(callback) {
     console.log('Making payment...');
-    setTimeout(callback, 1000);
+    setTimeout(callback, 2000);
 }
 
 orderFood(() => {
@@ -92,6 +79,18 @@ const passedStudentNamesUppercase = students.filter(student => student.passed).m
 console.log(passedStudentNamesUppercase);
 
 
+// 2 //
+
+// Write an expression to display the number of occurrences of each word.
+
+
+const words = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+const Count = words.reduce((acc, word) => {
+    acc[word] = (acc[word] || 0) + 1;
+    return acc;
+}, {});
+
+console.log(Count);
 
 // 5 //
 const studentsScores = {
@@ -158,8 +157,8 @@ const multiply = (a, b) => a * b;
 console.log(multiply(3, 4)); 
 
 // Differences:
-// Function declarations are hoisted, meaning they can be called before they are defined in the code.
-// Function expressions and arrow functions are not hoisted, so they must be defined before they are called.
+// Function declarations are hoisted, meaning they can be called before they are defined in the code
+// Function expressions and arrow functions are not hoisted, so they must be defined before they are called
 
 
 // 2) Scopes and their types
@@ -175,18 +174,13 @@ globalScopeExample();
 // Function Scope
 function functionScopeExample() {
     var functionVar = 'I am local to this function';
-    console.log(functionVar); // I am local to this function
+    console.log(functionVar); 
 }
 functionScopeExample();
 
-// Block Scope
-if (true) {
-    let blockVar = 'I am block scoped';
-    console.log(blockVar); // I am block scoped
-}
 
 
 // Differences:
-// - Global Scope: Variables declared outside any function or block are in the global scope and can be accessed from anywhere in the code.
-// - Function Scope: Variables declared within a function are in the function scope and can only be accessed within that function.
+// Global Scope: Variables declared outside any function or block are in the global scope and can be accessed from anywhere in the code.
+//  Function Scope: Variables declared within a function are in the function scope and can only be accessed within that function.
 
